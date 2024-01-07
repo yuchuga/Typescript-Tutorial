@@ -1,24 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Button from './components/Button';
+import Greet from './components/Greet';
+import Heading from './components/Heading';
+import Input from './components/Input';
+import PersonList from './components/PersonList';
+import Status from './components/Status';
+import { nameList } from './constants';
+
+const buttonClick = (e: React.MouseEvent<HTMLButtonElement>, id: number) => {
+  console.log('Button Clicked', e, id)
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Greet name='Yuan Chung' count={10} logIn={false} />
+      <PersonList names={nameList} />
+      <Status status='loading' />
+      <Heading>Placeholder</Heading>
+      <Button handleClick={buttonClick} />
+      <Input value='Tina' handleChange={(e) => console.log(e)} />
     </div>
   );
 }
