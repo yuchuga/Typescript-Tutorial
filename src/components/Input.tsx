@@ -1,16 +1,27 @@
-// OnChange Event Props
-type InputProps = {
-  value: string
-  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-}
+import { useState } from "react"
 
-const Input = (props: InputProps) => {
+// OnChange Event Props
+// type InputProps = {
+//   value: string
+//   handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+// }
+
+const Input = () => {
+  const [value, setValue] = useState('')
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(e.target.value)
+  }
+
   return (
-    <input 
-      type='text' 
-      value={props.value} 
-      onChange={props.handleChange}
-    />
+    <div>
+      <input 
+        type='text' 
+        value={value} 
+        onChange={handleChange}
+      />
+      {value}
+    </div>
   )
 }
 

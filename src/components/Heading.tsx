@@ -2,9 +2,10 @@ type HeadingProps = {
   children: string //children refers to content within a JSX tag i.e. Placeholder
 }
 
-const Heading = (props: HeadingProps) => {
+// Destructure Props 
+const Heading = ({ children }: HeadingProps) => {
   return (
-    <h2>{props.children}</h2>
+    <h2>{children}</h2>
   )
 }
 

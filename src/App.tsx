@@ -1,5 +1,6 @@
 import './App.css';
 import Button from './components/Button';
+import Container from './components/Container';
 import Greet from './components/Greet';
 import Heading from './components/Heading';
 import Input from './components/Input';
@@ -19,7 +20,8 @@ function App() {
       <Status status='loading' />
       <Heading>Placeholder</Heading>
       <Button handleClick={buttonClick} />
-      <Input value='Tina' handleChange={(e) => console.log(e)} />
+      <Input />
+      <Container styles={{ border: '1px solid black', padding: '1rem' }} />
     </div>
   );
 }
