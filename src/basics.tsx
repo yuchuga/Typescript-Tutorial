@@ -40,7 +40,7 @@ testStringOrNumberArray = [1, "two", 3]
 let user = {
   username: "john",
   age: 22,
-  isAdmin: false,
+  isAdmin: false
 };
 
 user.username = "jane"
@@ -52,9 +52,9 @@ user.isAdmin = true
 
 // DEFINE TYPE
 let userObj: {
-  username: string;
-  age: number;
-  isAdmin: boolean;
+  username: string
+  age: number
+  isAdmin: boolean
 };
 
 userObj = {
@@ -65,17 +65,17 @@ userObj = {
 };
 
 let userObj2: {
-  username: string;
-  age: number;
-  isAdmin: boolean;
-  phone?: string;
+  username: string
+  age: number
+  isAdmin: boolean
+  phone?: string
 };
 
 userObj2 = {
   username: "jane",
   age: 43,
   isAdmin: false,
-  phone: "+1234567",
+  phone: "+1234567"
 };
 
 /**  ANY TYPES - CAREFUL **/ 
@@ -96,7 +96,7 @@ let sayHi = () => { //return void
 };
 
 let funcReturnString = (): string => {
-  console.log("hi");
+  console.log("hi")
   return "lama dev"
 };
 
@@ -109,7 +109,7 @@ let multiple2 = (num: number): number => {
 };
 
 let multiple3 = (num: number): void => {
-  // return num * 2;   //Do sth but no return
+  // return num * 2   //Do sth but no return
 };
 
 let sum = (num1: number, num2: number, another?: number) => {
@@ -122,7 +122,7 @@ let func = (user: { username: string; age: number; phone?: string }) => {
 };
 
 /** Type Alias **/
-type userType = {
+type userType = { //compare syntax with interface 
   username: string,
   age: number,
   phone?: string
@@ -148,7 +148,7 @@ const emp: IEmployee = {
   username: "tom",
   email: "tom@gmail.com",
   age: 43,
-  employeeId: 1,
+  employeeId: 1
 };
 
 /** Generics **/
@@ -180,7 +180,7 @@ const test1: IPostBetter<string> = {
   id: 1,
   title: "post title",
   desc: "post desc",
-  extra: ["str", "str2"],
+  extra: ["str", "str2"]
 }
 
 //Parameter T constraint to object type
