@@ -211,3 +211,5 @@ const test4: IPostEvenBetter<ICategory> = {
   desc: "post desc",
   extra: [{ id: 1, title: "cat" }]
 };
+
+export {}
